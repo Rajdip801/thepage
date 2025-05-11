@@ -41,6 +41,10 @@ export default function Header() {
 
                 </div>
             </div>
+            <div
+        className="gap"
+        style={{ height: "60px", backgroundColor: "transparent" }}
+      ></div>
         </>
     );
 }

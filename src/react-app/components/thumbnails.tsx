@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../style/thumbnail.css";
 
+import views from "../assets/icons/Views_icon.svg";
+import likes from "../assets/icons/Love_icon.svg";
+
+
 interface ThumbnailProps {
   id: string;
 }
@@ -19,7 +23,7 @@ export default function ThumbnailById({ id }: ThumbnailProps): React.ReactElemen
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
   const API_BASE_URL =
-    import.meta.env.VITE_API_BASE_URL || "http://localhost/API/Apagefromthephotographer";
+    import.meta.env.VITE_API_BASE_URL || "https://apagefromthephotographer.site";
 //mark in here
   useEffect(() => {
     fetch(`${API_BASE_URL}/config/data_fetch.php?id=${id}`)
@@ -97,6 +101,7 @@ export default function ThumbnailById({ id }: ThumbnailProps): React.ReactElemen
       <a
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.466)), url(${thumbnail.image_url})`,
+          backgroundSize: "contain",
         }}
         href={`/videos/${id}`}
         aria-label={thumbnail.title}
@@ -105,12 +110,17 @@ export default function ThumbnailById({ id }: ThumbnailProps): React.ReactElemen
           await incrementViews();
           navigate(`/videos/${id}`);
         }}
-      >
+      ></a>
         <div className="details">
-          <p>Views:&nbsp;{thumbnail.views}</p>
-          <p>Likes:&nbsp;{thumbnail.likes}</p>
+        <div>
+          <img src={views} alt="views"></img>
+          <p>&nbsp;{thumbnail.views}</p>
         </div>
-      </a>
+          <div>
+            <img src={likes} alt="likes"></img>
+            <p>&nbsp;{thumbnail.likes}</p>
+          </div>
+        </div>
     </div>
   );
 }

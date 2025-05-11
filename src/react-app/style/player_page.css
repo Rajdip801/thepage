@@ -1,0 +1,74 @@
+.whole_page{
+  background-color: #303030;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.video_container{
+  width: 100%;
+  height: 50%;
+  padding: 0%;
+  margin: 20px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+}
+.video_container iframe{
+  width: 100%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+.video_details {
+  text-align: center;
+  color: #FAB03C;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.video_details h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .like_button {
+  padding: 10px 20px;
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */
+.like_button:hover {
+  background-color: #ec971f;
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}

@@ -7,3 +7,34 @@
     background-color: black;
     color: thistle;
 }
+.gridspace{
+    height: 400px;
+    width:  100%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #303030;
+}
+.innerspace{
+    height:400px;
+    width: 400px;
+    background-color: aquamarine;
+}
+.innerspace .up{
+    display: flex;
+}
+.innerspace .up div{
+    height:200px;
+    width: 200px;
+    background-color: blue;
+}
+.innerspace .down{
+    display: flex;
+}
+.innerspace .down div{
+    height:200px;
+    width: 200px;
+    background-color: blue;
+}

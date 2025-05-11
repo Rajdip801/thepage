@@ -1,0 +1,31 @@
+.image_teller{
+    display: flex;
+    justify-content: center;
+    align-items:end;
+}
+.left{
+    height: 202px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left span {
+    font-size: 275px;
+    color: #FAB03C;
+    font-weight: black;
+}
+.center{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 202px;
+    width: 100px;
+
+}
+.center span{
+    font-size: 30px;
+    color: #FFFFFF;
+    line-height: 25px;
+    letter-spacing: 29% ;
+}
