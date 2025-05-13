@@ -8,7 +8,7 @@
     color: thistle;
 }
 .gridspace{
-    height: 400px;
+    height: 500px;
     width:  100%;
     padding: 0%;
     margin: 0%;
@@ -18,23 +18,23 @@
     background-color: #303030;
 }
 .innerspace{
-    height:400px;
-    width: 400px;
+    height:500px;
+    width: 600px;
     background-color: aquamarine;
 }
 .innerspace .up{
     display: flex;
 }
 .innerspace .up div{
-    height:200px;
-    width: 200px;
+    height:250px;
+    width: 300px;
     background-color: blue;
 }
 .innerspace .down{
     display: flex;
 }
 .innerspace .down div{
-    height:200px;
-    width: 200px;
+    height:250px;
+    width: 300px;
     background-color: blue;
 }
